@@ -4,9 +4,21 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build",
-      "command": "dotnet",
+      "label": "yamllint",
       "type": "shell",
+      "command": "yamllint",
+      "args": [
+        "-s",
+        "-c",
+        "${workspaceFolder}/yamllint.yml",
+        "${workspaceFolder}/src/Jackett.Common/Definitions/"
+      ],
+      "problemMatcher": "$eslint-stylish"
+    },
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "dotnet",
       "args": [
         "build",
         // Ask dotnet build to generate full paths for file names.
@@ -22,7 +34,10 @@
       "presentation": {
           "reveal": "always"
       },
-      "problemMatcher": "$msCompile"
+      "problemMatcher": "$msCompile",
+      "dependsOn": [
+        "yamllint"
+      ]
     }
   ]
 }
