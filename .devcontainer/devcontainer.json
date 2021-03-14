@@ -1,5 +1,5 @@
 {
-  "image": "mcr.microsoft.com/dotnet/sdk:5.0",
+  "dockerFile": "./Dockerfile",
   "extensions": [
     "ms-dotnettools.csharp",
     "editorconfig.editorconfig"
