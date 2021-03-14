@@ -20,7 +20,7 @@
         "kind": "build"
       },
       "presentation": {
-          "reveal": "silent"
+          "reveal": "always"
       },
       "problemMatcher": "$msCompile"
     }
