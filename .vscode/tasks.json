@@ -36,7 +36,9 @@
         "run",
         "${workspaceFolder}/src",
         "--project",
-        "${workspaceFolder}/src/Jackett.Server/Jackett.Server.csproj"
+        "${workspaceFolder}/src/Jackett.Server/Jackett.Server.csproj",
+        "--framework",
+        "net5.0"
       ],
       "problemMatcher": "$msCompile"
     }
