@@ -5,15 +5,12 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug Server",
+      "name": ".NET Core Launch",
       "type": "coreclr",
       "request": "launch",
-      "program": "${workspaceFolder}/src/Jackett.Server/bin/Debug/net5.0/jackett",
-      "args": [],
-      "cwd": "${workspaceFolder}",
-      "stopAtEntry": false,
-      "internalConsoleOptions": "openOnSessionStart",
-      "preLaunchTask": "build"
+      "program": "dotnet",
+      "args": ["run"],
+      "cwd": "${workspaceFolder}/src/Jackett.Server/Jackett.Server.csproj,
     }
   ]
 }

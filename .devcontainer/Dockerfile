@@ -1,9 +1,9 @@
-FROM mcr.microsoft.com/dotnet/sdk:5.0-alpine
+# [Choice] .NET version: 5.0, 3.1, 2.1
+ARG VARIANT=5.0
+FROM mcr.microsoft.com/vscode/devcontainers/dotnet:0-${VARIANT}
 
-# Install yamllint
-RUN apk add python3 py3-pip --no-cache
+# [Optional] Uncomment this section to install additional OS packages.
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+     && apt-get -y install --no-install-recommends python3 python3-pip
+
 RUN python3 -m pip install yamllint
-
-# Create and use a "dev" user account to avoid permissions issues
-RUN addgroup -S dev && adduser -S dev -G dev -s /bin/ash
-USER dev
